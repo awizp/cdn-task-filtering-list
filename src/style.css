@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply w-full bg-black text-white;
+  }
+}
+
+@layer components {
+  .food-item {
+    @apply w-full rounded-xl p-5 hover:bg-zinc-900/50 transition duration-300 hover:translate-y-[-3px] hover:shadow hover:border-white;
+  }
+
+  .food-image {
+    @apply w-full rounded-xl overflow-hidden p-5 border-2 border-white/30 transition-colors duration-300;
+  }
+
+  .food-item:hover .food-image {
+    @apply border-white;
+  }
+
+  .food-body {
+    @apply flex justify-center items-center mt-3 bg-zinc-800 rounded-xl p-3;
+  }
+
+  .input-group {
+    @apply w-full md:w-[50%] flex gap-5 items-center justify-center mb-10;
+  }
+
+  .input-group select {
+    @apply bg-zinc-800 border-2 border-white/20 px-3 py-2 rounded-xl cursor-pointer hover:bg-zinc-800 transition-colors duration-300;
+  }
+
+  .input-group input {
+    @apply w-full bg-zinc-800 border-2 border-white/20 px-3 py-2 outline-none rounded-xl;
+  }
+}
+
+@layer main-section {
+  body {
+    background: url('/search-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  body::before {
+    content: '';
+  }
+
+  .main-section {
+    @apply w-full h-full;
+  }
+
+  .main-section {
+    z-index: 10;
+  }
+
+  body::before {
+    @apply fixed w-full h-full top-0 left-0 bg-black opacity-95 z-[-1];
+  }
+}

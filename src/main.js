@@ -9,7 +9,7 @@ let foodItems;
 let count = 0;
 
 // changing the country,
-const countryHandle = (countryValue = 'indian') => {
+const countryHandle = (countryValue = 'India') => {
     let url = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${countryValue}`;
     return url;
 };
